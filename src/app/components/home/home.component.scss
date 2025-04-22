@@ -1,0 +1,165 @@
+@import '../../../styles/colors.scss';
+
+.home {
+    color: $background;
+}
+
+.hero-bg {
+    margin-top: -62px;
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    position: absolute;
+    max-width: 100%;
+    box-sizing: border-box;
+    z-index: -1;
+}
+
+.hero-section {
+    position: relative;
+    height: 738px;
+}
+
+
+.text {
+    padding-top: 220px;
+    margin-left: 30px;
+    line-height: 135px;
+    font-size: 88px;
+    color: $background;
+}
+
+.bg-container {
+    height: 100%;
+    /* background: rgb(112, 131, 176);
+    background: linear-gradient(135deg, rgba(112, 131, 176, 1) 0%, rgba(181, 147, 171, 1) 100%); */
+
+    .hidden {
+        height: 150px;
+        visibility: hidden;
+    }
+}
+
+.button {
+    width: 100%;
+    font-weight: 600;
+    letter-spacing: 10%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+    transform: translateY(0);
+
+    &:hover {
+        transform: scale(1.1) translateY(-5px);
+    }
+}
+
+.alt-image {
+    width: 400px;
+    height: 418px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.adopt-container {
+    margin-top: 150px;
+
+    .button {
+        background-color: $secondary;
+    }
+}
+
+.sponsors-container {
+    margin-top: 150px;
+    width: 100%;
+    height: 120px;
+    background-color: rgba(193, 141, 116, 0.6);
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    align-content: center;
+
+    .logo {
+        height: 70px;
+        width: auto;
+        display: block; //
+        margin: 0 auto; // center
+
+        filter: invert(45%) sepia(87%) saturate(278%) hue-rotate(175deg) brightness(88%) contrast(88%) opacity(80%);
+    }
+}
+
+.hiw-container {
+    margin-top: 150px;
+    width: 100%;
+
+    .hiw-box {
+        height: 170px;
+        border-radius: 20px;
+        margin-bottom: 50px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    h2 {
+        margin-top: 30px;
+        margin-left: 15px;
+    }
+
+    p {
+        margin-top: 30px;
+        margin-left: 90px;
+    }
+
+    .box-primary {
+        background-color: $primary;
+    }
+
+    .box-secondary {
+        background-color: $secondary;
+    }
+
+    .box-accent {
+        background-color: $accent;
+    }
+}
+
+.stories-container {
+    margin-top: 150px;
+
+    h1 {
+        text-align: center;
+    }
+
+    .story-box {
+        margin-top: 50px;
+        border-radius: 20px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        background-color: $secondary;
+        height: 100%;
+        width: 616px;
+        padding: 0;
+
+        img {
+            width: 219px;
+            height: calc(100% - 48px);
+            object-fit: cover;
+            margin: 24px;
+            border-radius: 14px;
+        }
+
+        h3 {
+            margin-top: 24px;
+            margin-bottom: 32px;
+        }
+
+        p {
+            width: 307px;
+        }
+
+        .author {
+            text-align: right;
+        }
+    }
+}
+
+@media (min-width:1440px) {}

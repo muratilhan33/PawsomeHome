@@ -1,4 +1,93 @@
+@import 'styles/colors.scss';
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+    font-size: 16px;
+}
+
+html {
+    overflow-y: scroll;
+
+}
+
 * {
-    background-color: bisque;
+    font-family: "League Spartan", sans-serif;
+}
+
+
+.fs16 {
+    font-size: 1rem;
+}
+
+.fs18 {
+    font-size: 1.125rem;
+}
+
+.fs20 {
+    font-size: 1.25rem;
+}
+
+.fs24 {
+    font-size: 1.5rem;
+}
+
+.fs32 {
+    font-size: 2rem;
+}
+
+.fs36 {
+    font-size: 2.25rem;
+}
+
+.fs40 {
+    font-size: 2.5rem;
+}
+
+.fs48 {
+    font-size: 3rem;
+}
+
+.fs56 {
+    font-size: 3.5rem;
+}
+
+.fs64 {
+    font-size: 4rem;
+}
+
+.fs72 {
+    font-size: 4.5rem;
+}
+
+.mt20 {
+    margin-top: 20px;
+}
+
+.mt30 {
+    margin-top: 30px;
+}
+
+.mt40 {
+    margin-top: 40px;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.italic {
+    font-family: "Archivo Narrow", sans-serif;
+    font-style: italic;
+}
+
+.button {
+    background-color: $primary;
+    border-radius: 92px;
+    color: $background;
+    height: 77px;
+    border: none;
+}
+
+.fw200 {
+    font-weight: 200;
 }

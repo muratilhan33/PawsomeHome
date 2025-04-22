@@ -1,0 +1,55 @@
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <a [routerLink]="['/home']" routerLinkActive="router-link-active" class="fs20">PAWSOMEHOME</a>
+            </div>
+            <div class="col-1">
+                <span>
+                    <p class="fs18">Paws</p>
+                </span>
+                <div class="items">
+                    <div class="col item" *ngFor="let item of paws"><a class="fs16" routerLink="paws">{{item}}</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-1"><span>
+                    <p class="fs18">Destek Ol</p>
+                </span>
+                <div class="items">
+                    <div class="col item" *ngFor="let item of support"><a class="fs16" routerLink="paws">{{item}}</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-2"><span>
+                    <p class="fs18">Sosyal Medya</p>
+                </span>
+                <div class="items">
+                    <div class="col item" *ngFor="let item of social"><a class="fs16" routerLink="paws">{{item}}</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <span>
+                    <p class="fs20">Haber Ağımıza Katıl</p>
+                </span>
+                <div class="col">
+                    <div class="input-wrapper">
+                        <input type="text" class="input-text form-control" name="" id="" placeholder="E-Posta Adresi"
+                            required />
+                        <button type="submit" class="button">KAYIT OL</button>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-gradient"></div>
+</div>
