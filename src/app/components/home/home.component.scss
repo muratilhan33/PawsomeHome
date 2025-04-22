@@ -22,6 +22,28 @@
     height: 738px;
 }
 
+.elipse {
+    width: 680px;
+    height: 680px;
+
+    opacity: 50%;
+    filter: blur(300px) opacity(60%);
+    position: absolute;
+
+}
+
+.elipse-secondary {
+    background-color: #D3708B;
+    left: 93%;
+    top: 25%;
+}
+
+.elipse-primary {
+    background-color: #00BBFF;
+    opacity: 35%;
+    right: 93%;
+    top: 60%;
+}
 
 .text {
     padding-top: 220px;
@@ -58,6 +80,8 @@
 .alt-image {
     width: 400px;
     height: 418px;
+    object-fit: cover;
+    object-position: center 80%;
     border-radius: 20px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -138,6 +162,8 @@
         height: 100%;
         width: 616px;
         padding: 0;
+        position: relative;
+        overflow: hidden;
 
         img {
             width: 219px;
@@ -145,6 +171,15 @@
             object-fit: cover;
             margin: 24px;
             border-radius: 14px;
+        }
+
+        .img-zoom {
+            height: 280px;
+        }
+
+        .img-left {
+            object-fit: cover;
+            object-position: 70%;
         }
 
         h3 {
@@ -161,5 +196,7 @@
         }
     }
 }
+
+
 
 @media (min-width:1440px) {}
