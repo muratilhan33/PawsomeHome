@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
 import * as AOS from 'aos';
+import { RouterLink } from '@angular/router';
+import { ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'home',
   standalone: true,
-  imports: [CarouselModule],
+  imports: [CarouselModule, RouterLink],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
@@ -16,6 +18,12 @@ export class HomeComponent {
       duration: 1000,
       once: true // sadece bir kez animasyon gösterilsin
     });
+  }
+
+  constructor(private viewportScroller: ViewportScroller) { }
+
+  scrollToHiw() {
+    this.viewportScroller.scrollToAnchor('hiw');
   }
 
   customOptions: OwlOptions = {

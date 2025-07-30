@@ -4,6 +4,22 @@
     color: $background;
 }
 
+.bubble {
+    margin-top: auto;
+    bottom: 1vh;
+    position: fixed;
+    border-radius: 5vh;
+    padding: 10px;
+    scroll-behavior: smooth;
+    z-index: 2;
+
+    svg {
+        height: 5vh;
+        width: 5vh;
+        border-radius: 5vh;
+    }
+}
+
 .hero-bg {
     margin-top: -62px;
     width: 100%;
