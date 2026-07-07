@@ -1,8 +1,36 @@
 @import '../../../styles/colors.scss';
 
 .category-menu {
-    height: 60px;
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
-    padding-left: 5px;
+
+    .nav-item {
+        padding: 10px;
+    }
+
+    .active {
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+}
+
+.cards {
+    margin-top: 40px;
+
+
+    .card {
+        background-color: rgba(255, 255, 255, 0.5);
+        box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    img {
+        height: 250px;
+        width: 100%;
+        border-radius: 5px;
+        object-fit: cover;
+        //object-position: top;
+    }
+
+    a {
+        color: black;
+    }
 }

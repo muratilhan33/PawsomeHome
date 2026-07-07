@@ -1,15 +1,46 @@
 <div class="container pt-3">
     <div class="row">
 
+        <!--Breadcrumb-->
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#" style="color: black;" routerLink="/"><i
+                            class="fa fa-house"></i></a></li>
+
+                <li class="breadcrumb-item active" aria-current="page"><a href="#" class="text-decoration-none"
+                        style="color: black;" routerLink="/explore">explore</a></li>
+            </ol>
+        </nav>
+
         <div class="col-md-3">
-            <a href="#" style="color: black;" routerLink="/"><i class="fa fa-house"></i></a>
-            <i class="bi bi-chevron-compact-right"></i>
-            <a href="#" class="text-decoration-none" style="color: black;" routerLink="/explore">explore</a>
-
-
-            <!--Kategori Menüsü-->
-            <div class="category-menu mt-3 ps-2">
-                <button class="list-group-item list-group-item-action nav-item">Tüm evcil hayvanlar</button>
+            <!--Category Menu-->
+            <div class="category-menu mt-3">
+                <button (click)="changeCategory()" class="list-group-item list-group-item-action nav-item"
+                    [class.active]="selectedCategory==null || selectedCategory==undefined">Tüm İlanlar</button>
+                <button *ngFor="let category of categories" class="list-group-item list-group-item-action nav-item"
+                    [class.active]="category==selectedCategory" (click)="changeCategory(category)">{{category.name}}
+                    İlanları</button>
+            </div>
+        </div>
+        <!--Cards-->
+        <div class="col-md-9 cards">
+            <div class="row">
+                <ng-container *ngFor="let paw of selectedPaws">
+                    <div class="col-md-4">
+                        <div class="card mb-3">
+                            <a href="#" routerLink="/" class="text-decoration-none" aria-describedby="">
+                                <img class="img-fluid mx-auto" src="/assets/img/{{paw.imageUrl}}" alt="{{paw.title}}"
+                                    title="{{paw.title}}">
+                                <div class="card-body">
+                                    <span class="card-title d-block text-truncate">
+                                        {{paw.title}}
+                                    </span>
+                                    <div class="">... $07/07/2026</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </ng-container>
             </div>
         </div>
     </div>
