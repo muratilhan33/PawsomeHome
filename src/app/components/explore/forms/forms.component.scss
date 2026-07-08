@@ -1,0 +1,26 @@
+@import '../../../../styles/colors.scss';
+
+.container-filter {
+    color: black;
+
+    .card {
+        background-color: rgba(255, 255, 255, 0.2);
+        color: black;
+    }
+
+    .form-select {
+        background-color: rgba(255, 255, 255, 0.2);
+        color: black;
+    }
+
+    .dropdown-item:hover {
+        background-color: $primary;
+        color: #ffffff;
+    }
+
+    .btn {
+        background-color: rgba(255, 255, 255, 0.2);
+        color: black;
+    }
+
+}

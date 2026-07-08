@@ -5,11 +5,12 @@ import { CategoryRepository } from '../../models/category.repository';
 import { PawRepository } from '../../models/paw.repository';
 import { Category } from '../../models/category.model';
 import { Paw } from '../../models/paw.model';
+import { FormsComponent } from "./forms/forms.component";
 
 @Component({
   selector: 'app-explore',
   standalone: true,
-  imports: [RouterLink, NgFor],
+  imports: [RouterLink, NgFor, FormsComponent],
   templateUrl: './explore.component.html',
   styleUrl: './explore.component.scss'
 })

@@ -14,13 +14,17 @@
 
         <div class="col-md-3">
             <!--Category Menu-->
-            <div class="category-menu mt-3">
+            <div class="category-menu">
                 <button (click)="changeCategory()" class="list-group-item list-group-item-action nav-item"
                     [class.active]="selectedCategory==null || selectedCategory==undefined">Tüm İlanlar</button>
                 <button *ngFor="let category of categories" class="list-group-item list-group-item-action nav-item"
                     [class.active]="category==selectedCategory" (click)="changeCategory(category)">{{category.name}}
                     İlanları</button>
             </div>
+
+            <!--Filter Menu-->
+            <app-forms></app-forms>
+
         </div>
         <!--Cards-->
         <div class="col-md-9 cards">
@@ -28,7 +32,7 @@
                 <ng-container *ngFor="let paw of selectedPaws">
                     <div class="col-md-4">
                         <div class="card mb-3">
-                            <a href="#" routerLink="/" class="text-decoration-none" aria-describedby="">
+                            <a href="#" routerLink="/explore" class="text-decoration-none" aria-describedby="">
                                 <img class="img-fluid mx-auto" src="/assets/img/{{paw.imageUrl}}" alt="{{paw.title}}"
                                     title="{{paw.title}}">
                                 <div class="card-body">

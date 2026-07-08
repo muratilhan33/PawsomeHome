@@ -1,0 +1,77 @@
+<div class="container-filter my-5">
+    <div class="row">
+        <div class=" mb-4">
+            <div class="card">
+                <div class="card-header font-weight-bold">
+                    <i class="bi bi-funnel-fill"></i> Filtrele
+                </div>
+                <div class="card-body">
+                    <form id="filterForm">
+                        <label for="cityFilter" class="form-label fw-bold">Şehir</label>
+
+                        <div class="dropdown mb-3">
+                            <button
+                                class="btn dropdown-toggle w-100 text-start d-flex justify-content-between align-items-center"
+                                type="button" id="cityDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                Şehir Seçin
+                            </button>
+                            <ul class="dropdown-menu w-100" aria-labelledby="cityDropdown">
+                                <li><a class="dropdown-item" href="#">İstanbul</a></li>
+                                <li><a class="dropdown-item" href="#">Ankara</a></li>
+                                <li><a class="dropdown-item" href="#">İzmir</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Yaş Kategorisi</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="ageFilter" id="ageAll" value="all"
+                                    checked>
+                                <label class="form-check-label" Milford for="ageAll">Tümü</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="ageFilter" id="age1" value="18-25">
+                                <label class="form-check-label" for="age1">0-6 Aylık</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="ageFilter" id="age2" value="26-40">
+                                <label class="form-check-label" for="age2">6 Aylık - 2 Yaş</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="ageFilter" id="age2" value="26-40">
+                                <label class="form-check-label" for="age2">2-7 Yaş</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="ageFilter" id="age2" value="26-40">
+                                <label class="form-check-label" for="age2">7 Yaş ve üzeri</label>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Cinsiyet</label>
+                            <div class="btn-group w-100" role="group">
+                                <input type="radio" class="btn-check" name="genderFilter" id="genderAll" value="all"
+                                    checked>
+                                <label class="btn " for="genderAll">Tümü</label>
+
+                                <input type="radio" class="btn-check" name="genderFilter" id="genderK" value="kadin">
+                                <label class="btn " for="genderK">Dişi</label>
+
+                                <input type="radio" class="btn-check" name="genderFilter" id="genderE" value="erkek">
+                                <label class="btn " for="genderE">Erkek</label>
+                            </div>
+                        </div>
+
+                        <button type="button" class="btn btn-outline-secondary btn-sm w-100 mt-2"
+                            onclick="resetFilters()">
+                            Filtreleri Temizle
+                        </button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
