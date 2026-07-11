@@ -29,6 +29,7 @@
         {
             "id": 1,
             "category": "Kedi",
+            "gender": "Erkek",
             "name": "Moshi",
             "imageUrl": "1.webp",
             "city": "İzmir",
@@ -38,6 +39,7 @@
         {
             "id": 2,
             "category": "Kedi",
+            "gender": "Erkek",
             "name": "4 OYUNCU YAVRUMUZA YUVA ARIYORUZ!",
             "imageUrl": "6.webp",
             "city": "Sakarya",
@@ -47,6 +49,7 @@
         {
             "id": 3,
             "category": "Köpek",
+            "gender": "Erkek",
             "name": "Duman",
             "imageUrl": "11.webp",
             "city": "İzmir",
@@ -55,6 +58,7 @@
         {
             "id": 1,
             "category": "Kedi",
+            "gender": "Dişi",
             "name": "Moshi",
             "imageUrl": "1.webp",
             "city": "İzmir",
@@ -64,6 +68,7 @@
         {
             "id": 2,
             "category": "Kedi",
+            "gender": "Dişi",
             "name": "4 OYUNCU YAVRUMUZA YUVA ARIYORUZ!",
             "imageUrl": "6.webp",
             "city": "Sakarya",
@@ -73,6 +78,7 @@
         {
             "id": 3,
             "category": "Köpek",
+            "gender": "Dişi",
             "name": "Duman",
             "imageUrl": "11.webp",
             "city": "İzmir",

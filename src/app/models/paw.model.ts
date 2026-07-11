@@ -3,6 +3,7 @@ export class Paw {
     constructor(
         public id?: number,
         public category?: string,
+        public gender?: string,
         public name?: string,
         public imageUrl?: string,
         public city?: string,
