@@ -27,6 +27,10 @@ export class FormsComponent {
   }
 
   resetFilters() {
+    const ageAll = document.getElementById('ageAll') as HTMLInputElement;
+    const genderAll = document.getElementById('genderAll') as HTMLInputElement;
     this.selectedCity = 'Şehir Seçin';
+    ageAll.checked = true;
+    genderAll.checked = true;
   }
 }
