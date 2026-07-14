@@ -6,7 +6,7 @@
                     <i class="bi bi-funnel-fill"></i> Filtrele
                 </div>
                 <div class="card-body">
-                    <form id="filterForm">
+                    <form id="filterForm" ()>
                         <label for="cityFilter" class="form-label fw-bold">Şehir</label>
 
                         <div class="dropdown mb-3">
@@ -22,41 +22,47 @@
                         </div>
 
                         <div class="mb-3">
-                            <label class="form-label fw-bold">Yaş Kategorisi</label>
+                            <label class="form-label fw-bold" id="age">Yaş Kategorisi</label>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="ageFilter" id="ageAll" value="all"
-                                    checked>
+                                <input [(ngModel)]="selectedAge" (click)="applyFilters()" class="form-check-input"
+                                    type="radio" name="ageFilter" id="ageAll" value="all" checked>
                                 <label class="form-check-label" for="ageAll">Tümü</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="ageFilter" id="age1" value="18-25">
+                                <input [(ngModel)]="selectedAge" (click)="applyFilters()" class="form-check-input"
+                                    type="radio" name="ageFilter" id="age1" value="0-6 Aylık">
                                 <label class="form-check-label" for="age1">0-6 Aylık</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="ageFilter" id="age2" value="26-40">
+                                <input [(ngModel)]="selectedAge" (click)="applyFilters()" class="form-check-input"
+                                    type="radio" name="ageFilter" id="age2" value="6 Aylık - 2 Yaş">
                                 <label class="form-check-label" for="age2">6 Aylık - 2 Yaş</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="ageFilter" id="age3" value="26-40">
+                                <input [(ngModel)]="selectedAge" (click)="applyFilters()" class="form-check-input"
+                                    type="radio" name="ageFilter" id="age3" value="2-7 Yaş">
                                 <label class="form-check-label" for="age3">2-7 Yaş</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="ageFilter" id="age4" value="26-40">
+                                <input [(ngModel)]="selectedAge" (click)="applyFilters()" class="form-check-input"
+                                    type="radio" name="ageFilter" id="age4" value="7 Yaş ve üzeri">
                                 <label class="form-check-label" for="age4">7 Yaş ve üzeri</label>
                             </div>
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label fw-bold">Cinsiyet</label>
-                            <div class="btn-group w-100" role="group">
-                                <input type="radio" class="btn-check" name="genderFilter" id="genderAll" value="all"
-                                    checked>
+                            <div class="btn-group w-100" role="group" id="gender" (change)="applyFilters()">
+                                <input [(ngModel)]="selectedGender" (change)="applyFilters()" type="radio"
+                                    class="btn-check" name="genderFilter" id="genderAll" value="all" checked>
                                 <label class="btn" for="genderAll">Tümü</label>
 
-                                <input type="radio" class="btn-check" name="genderFilter" id="genderK" value="kadin">
+                                <input [(ngModel)]="selectedGender" type="radio" class="btn-check" name="genderFilter"
+                                    id="genderK" value="Dişi">
                                 <label class="btn" for="genderK">Dişi</label>
 
-                                <input type="radio" class="btn-check" name="genderFilter" id="genderE" value="erkek">
+                                <input [(ngModel)]="selectedGender" type="radio" class="btn-check" name="genderFilter"
+                                    id="genderE" value="Erkek">
                                 <label class="btn" for="genderE">Erkek</label>
                             </div>
                         </div>

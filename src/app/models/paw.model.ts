@@ -5,6 +5,7 @@ export class Paw {
         public category?: string,
         public gender?: string,
         public name?: string,
+        public age?: string,
         public imageUrl?: string,
         public city?: string,
         public title?: string,
