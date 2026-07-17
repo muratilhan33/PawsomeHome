@@ -12,7 +12,7 @@ export interface PawFilters {
 })
 
 export class FilterService {
-  private filter: PawFilters = { city: '', age: '', gender: '' };
+  private filter: PawFilters = { city: 'Tümü', age: 'all', gender: 'all' };
 
   private filterSubject = new BehaviorSubject<PawFilters>(this.filter);
 
@@ -21,7 +21,6 @@ export class FilterService {
   updateFilters(newFilters: Partial<PawFilters>) {
     const current = this.filterSubject.value;
     this.filterSubject.next(newFilters);
-    console.log(current);
   }
 
   resetFilters() {

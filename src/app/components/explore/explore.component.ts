@@ -52,8 +52,9 @@ export class ExploreComponent implements OnInit, OnDestroy {
 
   updateSelectedPaws(): void {
     this.selectedPaws = this.pawRepository.getPaws(this.selectedCategory);
-    console.log("selected category: " + this.selectedCategory?.name);
-    console.log("selected paws: " + this.selectedPaws);
+    this.filterService.filters$.subscribe((filters: PawFilters) => {
+      this.filterData(filters);
+    })
   }
 
   filterData(filters: PawFilters) {

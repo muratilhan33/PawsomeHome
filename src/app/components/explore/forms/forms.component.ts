@@ -20,7 +20,8 @@ export class FormsComponent implements OnInit {
 
   constructor(private cityService: CityService,
     private filterService: FilterService
-  ) { }
+  ) {
+  }
 
   ngOnInit(): void {
     this.cityService.getCities().subscribe(c => {
@@ -32,10 +33,19 @@ export class FormsComponent implements OnInit {
       this.selectedAge = filters.age!;
       this.selectedGender = filters.gender!;
     })
+
+    this.selectedCity = 'Şehir Seçin';
+    this.selectedAge = 'all';
+    this.selectedGender = 'all';
   }
 
   changeCity(city: City) {
     this.selectedCity = city.name!;
+    this.applyFilters();
+  }
+
+  cityAll() {
+    this.selectedCity = "Şehir Seçin";
     this.applyFilters();
   }
 
@@ -50,7 +60,7 @@ export class FormsComponent implements OnInit {
   resetFilters() {
     const ageAll = document.getElementById('ageAll') as HTMLInputElement;
     const genderAll = document.getElementById('genderAll') as HTMLInputElement;
-    this.selectedCity = 'Şehir Seçin';
+    this.selectedCity = 'Tümü';
     this.selectedAge = 'all';
     this.selectedGender = 'all';
     this.applyFilters();
