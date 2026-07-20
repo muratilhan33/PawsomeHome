@@ -18,12 +18,15 @@
         </nav>
 
         <div class="col-6">
+            <span class="h5">Destek Talebi Oluştur</span>
             <form>
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Ad Soyad">
-                    <input type="tel" class="form-control mt-4" placeholder="Telefon Numarası">
-                    <input type="email" class="form-control mt-4" placeholder="E-posta Adresi">
-                    <textarea class="form-control mt-4" placeholder="Mesaj"></textarea>
+                    <input type="text" class="form-control mt-3" placeholder="Ad Soyad" required>
+                    <input type="tel" class="form-control mt-3" id="phoneInput" placeholder="Telefon Numarası"
+                        [value]="phoneNumber" (input)="onPhoneInput($event)" autocomplete="tel" required>
+                    <input type="email" class="form-control mt-3" placeholder="E-posta Adresi" required>
+                    <textarea class="form-control mt-3" placeholder="Mesaj" required></textarea>
+                    <label class="label-box px-2">Bizimle</label>
                 </div>
             </form>
         </div>

@@ -1,3 +1,15 @@
+@import '../../../styles/colors.scss';
+
 .form-control {
     max-width: 300px;
+    height: 45px;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+textarea {
+    height: 200px !important;
+}
+
+.label-box {
+    border: 2px dashed #CCCCCC;
 }
