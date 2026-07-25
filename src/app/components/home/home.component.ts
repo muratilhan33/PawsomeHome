@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
 import * as AOS from 'aos';
 import { RouterLink } from '@angular/router';
@@ -13,6 +13,8 @@ import { ViewportScroller } from '@angular/common';
 })
 export class HomeComponent {
 
+  isVisible = false;
+
   ngOnInit(): void {
     AOS.init({
       duration: 1000,
@@ -22,8 +24,20 @@ export class HomeComponent {
 
   constructor(private viewportScroller: ViewportScroller) { }
 
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.isVisible = window.scrollY > 300;
+  }
+
   scrollToHiw() {
     this.viewportScroller.scrollToAnchor('hiw');
+  }
+
+  scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
   }
 
   customOptions: OwlOptions = {
