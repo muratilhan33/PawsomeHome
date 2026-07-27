@@ -19,14 +19,26 @@
 
         <div class="col-6">
             <span class="h5">Destek Talebi Oluştur</span>
-            <form>
+            <form [formGroup]="form" (ngSubmit)="onSubmit()">
                 <div class="form-group">
-                    <input type="text" class="form-control mt-3" placeholder="Ad Soyad" required>
+                    <input type="text" class="form-control mt-3" placeholder="Ad Soyad" formControlName="fullName">
                     <input type="tel" class="form-control mt-3" id="phoneInput" placeholder="Telefon Numarası"
-                        [value]="phoneNumber" (input)="onPhoneInput($event)" autocomplete="tel" required>
-                    <input type="email" class="form-control mt-3" placeholder="E-posta Adresi" required>
-                    <textarea class="form-control mt-3" placeholder="Mesaj" required></textarea>
-                    <label class="label-box px-2">Bizimle</label>
+                        (input)="onPhoneInput($event)" autocomplete="tel" formControlName="phone">
+                    <input type="email" class="form-control mt-3" placeholder="E-posta Adresi" formControlName="email">
+                    <textarea class="form-control mt-3" placeholder="Mesaj" formControlName="message"></textarea>
+                    <div class="form-control label-box px-2 mt-3">
+                        <i class="fa-regular fa-image no-file-icon fs20"></i>
+                        <label class="no-file-text">
+                            Bizimle paylaşmak istediğiniz fotoğrafları buradan
+                            yükleyebilirsiniz.
+                            En fazla 4 fotoğraf seçebilirsiniz.
+                        </label>
+                    </div>
+                    <div class="rc-anchor rc-anchor-normal rc-anchor-light mt-3">
+                        <re-captcha (resolved)="onCaptchaResolved($event)" (errored)="onCaptchaExpired()"></re-captcha>
+                    </div>
+                    <button class="btn mt-3 fs20 submit form-control" type="submit"
+                        [disabled]="form.invalid || !captchaToken()">Gönder</button>
                 </div>
             </form>
         </div>

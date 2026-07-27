@@ -4,6 +4,10 @@
     max-width: 300px;
     height: 45px;
     background-color: rgba(255, 255, 255, 0.4);
+
+    &:focus {
+        box-shadow: 0 0 8px 2px $primary;
+    }
 }
 
 textarea {
@@ -12,4 +16,29 @@ textarea {
 
 .label-box {
     border: 2px dashed #CCCCCC;
+    height: 150px;
+    align-content: center;
+    text-align: center;
+    color: #555;
+}
+
+.rc-anchor {
+    re-captcha {
+        background-color: $primary;
+    }
+}
+
+.submit {
+    color: white;
+    font-weight: 600;
+    letter-spacing: 10%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transform: translateY(0);
+    background-color: $primary;
+
+    &:hover {
+        background-color: $background;
+        border: 2px solid $primary ;
+        color: $primary;
+    }
 }
