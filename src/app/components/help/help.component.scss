@@ -37,8 +37,17 @@ textarea {
     background-color: $primary;
 
     &:hover {
-        background-color: $background;
-        border: 2px solid $primary ;
-        color: $primary;
+        background-color: $hover-primary;
+        border: 2px solid $background;
+        color: white;
     }
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.no-file-text {
+    display: inline-block;
+    cursor: pointer;
 }

@@ -3,11 +3,13 @@ import { RouterLink } from '@angular/router';
 import { RecaptchaModule } from 'ng-recaptcha';
 import { environment } from '../../../environments/environment.development';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+import { fileListValidator } from '@shared/validators/file-validators';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-help',
   standalone: true,
-  imports: [RouterLink, RecaptchaModule, ReactiveFormsModule],
+  imports: [RouterLink, RecaptchaModule, ReactiveFormsModule, NgIf],
   templateUrl: './help.component.html',
   styleUrl: './help.component.scss'
 })
@@ -21,7 +23,8 @@ export class HelpComponent {
     fullName: ['', Validators.required],
     phone: ['', Validators.required],
     email: ['', Validators.required],
-    message: ['', Validators.required]
+    message: ['', Validators.required],
+    photo: this.fb.control<File[] | null>(null, fileListValidator(4, 5))
   });
 
 
@@ -66,6 +69,15 @@ export class HelpComponent {
 
   onCaptchaExpired(): void {
     this.captchaToken.set(null);
+  }
+
+  onFileChange(event: Event): void {
+    const input = event.target as HTMLInputElement;
+    if (input.files) {
+      const filesArray = Array.from(input.files);
+      this.form.controls.photo.setValue(filesArray);
+      this.form.controls.photo.markAsTouched();
+    }
   }
 
   onSubmit(): void {

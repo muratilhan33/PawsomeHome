@@ -26,14 +26,32 @@
                         (input)="onPhoneInput($event)" autocomplete="tel" formControlName="phone">
                     <input type="email" class="form-control mt-3" placeholder="E-posta Adresi" formControlName="email">
                     <textarea class="form-control mt-3" placeholder="Mesaj" formControlName="message"></textarea>
-                    <div class="form-control label-box px-2 mt-3">
-                        <i class="fa-regular fa-image no-file-icon fs20"></i>
-                        <label class="no-file-text">
+                    <label class="no-file-text" for="input-file">
+                        <div class="form-control label-box px-2 mt-3">
+
+                            <i class="fa-regular fa-image no-file-icon fs20"></i>
+                            <br>
                             Bizimle paylaşmak istediğiniz fotoğrafları buradan
                             yükleyebilirsiniz.
                             En fazla 4 fotoğraf seçebilirsiniz.
-                        </label>
+                        </div>
+                    </label>
+                    <input class="input-file" type="file" accept="image/*" id="input-file" multiple
+                        (change)="onFileChange($event)">
+
+                    <div *ngIf="form.get('photo')?.touched && form.get('photo')?.errors as errors"
+                        class="text-danger mt-1">
+                        <small *ngIf="errors['required']">Lütfen en az 1 fotoğraf seçin.</small>
+                        <small *ngIf="errors['maxFiles']">
+                            En fazla {{ errors['maxFiles'].max }} fotoğraf seçebilirsiniz (seçilen: {{
+                            errors['maxFiles'].actual }}).
+                        </small>
+                        <small *ngIf="errors['maxSize']">
+                            Şu dosyalar {{ errors['maxSize'].max }}MB sınırını aşıyor: {{
+                            errors['maxSize'].files.join(', ') }}
+                        </small>
                     </div>
+
                     <div class="rc-anchor rc-anchor-normal rc-anchor-light mt-3">
                         <re-captcha (resolved)="onCaptchaResolved($event)" (errored)="onCaptchaExpired()"></re-captcha>
                     </div>
