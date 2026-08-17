@@ -1,0 +1,16 @@
+<div class="accordion">
+    @for (item of items(); track item.id) {
+    <div class="accordion-item" [class.active]="isOpen(item.id)">
+        <button class="accordion-header" type="button" [attr.aria-expanded]="isOpen(item.id)" (click)="toggle(item.id)">
+            <span>{{item.question}}</span>
+            <span class="icon">{{isOpen(item.id)? '-' : '+' }}</span>
+        </button>
+
+        <div class="accordion-body" [class.open]="isOpen(item.id)">
+            <div class="accordion-body-inner">
+                {{item.answer}}
+            </div>
+        </div>
+    </div>
+    }
+</div>

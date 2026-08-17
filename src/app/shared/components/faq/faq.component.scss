@@ -1,0 +1,53 @@
+:host {
+    display: block;
+}
+
+.accordion-item {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.accordion-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: none;
+    border: none;
+    text-align: left;
+    font-weight: 400;
+    cursor: pointer;
+
+    .icon {
+        font-size: 1.25rem;
+        transition: transform 0.2s ease;
+    }
+}
+
+.accordion-item.active .icon {
+    transform: rotate(180deg);
+}
+
+.accordion-body {
+    display: grid;
+    grid-template-rows: minmax(auto, 0fr); // ← auto yerine 0px minimum
+    transition: grid-template-rows 0.25s ease;
+    min-height: 0;
+    overflow: hidden;
+    padding: 0;
+
+    &.open {
+        grid-template-rows: minmax(auto, 1fr); // ← burada da aynı şekilde
+    }
+}
+
+.accordion-body-inner {
+    overflow: hidden;
+    min-height: 0px;
+    padding: 0 1rem;
+}
+
+.accordion-body.open .accordion-body-inner {
+    padding-bottom: 1rem;
+}
