@@ -56,7 +56,7 @@
 
                     <div *ngIf="form.get('photo')?.touched && form.get('photo')?.errors as errors"
                         class="text-danger mt-1">
-                        <small *ngIf="errors['required']">Lütfen en az 1 fotoğraf seçin.</small>
+                        <!--  <small *ngIf="errors['required']">Lütfen en az 1 fotoğraf seçin.</small>  -->
                         <small *ngIf="errors['maxFiles']">
                             En fazla {{ errors['maxFiles'].max }} fotoğraf seçebilirsiniz (seçilen: {{
                             errors['maxFiles'].actual }}).

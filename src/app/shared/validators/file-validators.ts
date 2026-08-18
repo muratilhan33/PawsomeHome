@@ -6,7 +6,8 @@ export function fileListValidator(maxFiles: number, maxSizeMb: number) {
         const files: File[] = control.value;
 
         if (!files || files.length === 0) {
-            return { required: true };
+            // return { required: true };
+            return null;
         }
 
         if (files.length > maxFiles) {
