@@ -17,17 +17,56 @@
     <div class="row">
         <!--Left side-->
         <span class="h4">İletişim Bilgileri</span>
-        <div class="card mt-3 p-3 col-6">
-            <h5>Bize Ulaşın</h5>
-            <div class="need-help">
-                <h6 class="mt-3">Yardıma mı ihtiyacınız var?</h6>
-                <a href="#" routerLink="/help" class="btn btn-help w-100 mt-2">
-                    <i class="bi bi-headset"></i>
-                    Destek Talebi Oluştur</a>
+        <div class="col-md-6">
+            <div class="card mt-3 p-3">
+                <h5>Bize Ulaşın</h5>
+                <div class="need-help">
+                    <h6 class="mt-4">Yardıma mı ihtiyacınız var?</h6>
+                    <a href="#" routerLink="/help" class="btn btn-help w-100 mt-2">
+                        <i class="bi bi-headset"></i>
+                        Destek Talebi Oluştur</a>
+
+                    <h6 class="mt-4">Telefon Numarası</h6>
+                    <a href="tel:05075555555" class="link-text d-inline-flex align-items-center">
+                        <i class="bi bi-whatsapp me-1"></i>
+                        <span>0555 555 55 55</span>
+                    </a>
+
+                    <h6 class="mt-4">E-posta</h6>
+                    <a href="mailto:muratilhan33@gmail.com" class="link-text d-inline-flex align-items-center">
+                        <i class="bi bi-envelope me-1"></i>
+                        <span>muratilhan33&#64;gmail.com</span>
+                    </a>
+
+                    <h6 class="mt-4">Adres</h6>
+                    <i class="bi bi-geo-alt me-1"></i>
+                    <span>Selçuk Üniversitesi Teknoloji Fakültesi (A Blok)<br>
+                        Akademi Mahallesi, Selçuk Üniversitesi. Alaaddin Keykubat Kampüsü<br> 42250
+                        Selçuklu/Konya</span>
+
+                </div>
             </div>
         </div>
 
         <!--Right side-->
-        <div class="card mt-3 p-3 col-6"></div>
+        <div class="col-md-6">
+            <div class="card mt-3 p-3">
+                <h6>Konum</h6>
+
+                <div class="map-wrapper">
+                    @if (!isMapLoaded()){
+                    <div class="map-loading">
+                        <div class="spinner"></div>
+                        <span>Harita yükleniyor...</span>
+                    </div>
+                    }
+
+                    <iframe class="map" [class.map-visible]="isMapLoaded()"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3142.791717058437!2d32.506742476452175!3d38.02863489749524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d08d15e76415db%3A0x57050886b797f0ee!2sSel%C3%A7uk%20%C3%9Cniversitesi%20Teknoloji%20Fak%C3%BCltesi%20(%20A%20Blok)!5e0!3m2!1str!2str!4v1787574925110!5m2!1str!2str"
+                        allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+                        (load)="onMapLoad()"></iframe>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

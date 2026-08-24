@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { RouterLink } from "@angular/router";
 
 @Component({
@@ -9,5 +9,9 @@ import { RouterLink } from "@angular/router";
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
+  isMapLoaded = signal(false);
 
+  onMapLoad(): void {
+    this.isMapLoaded.set(true);
+  }
 }
