@@ -14,30 +14,148 @@
         </ol>
     </nav>
 
-    <div class="card mt-3 p-3">
+    <!-- Hero Section -->
+    <div class="card mt-3 p-3 hero-card">
         <div class="row">
 
-            <div class="col-md-6">
+            <!-- Hero Left -->
+            <div class="col-md-8">
                 <h4>Hakkımızda</h4>
                 <br>
                 <h5>Her Pati Bir Yuvayı Hak Eder.</h5>
-                <span class="hero-text mt-3">
-                    PawsomeHome, hayvanların sevgi dolu yuvalara kavuşmasını kolaylaştırmak için
-                    tasarlanmış
-                    bir hayvan
-                    sahiplenme platformu
-                    konseptidir. <br><br>
-                    Amacımız, insanların kendileri için doğru dostu keşfetmesine ve bilinçli
-                    sahiplenme
-                    sürecini daha kolay
-                    deneyimlemesine yardımcı olmaktır.</span>
-                <button class="button fs16 mt-3 d-block">Dostunu Keşfet →</button>
+                <p class="hero-text mt-3 fs18">
+                    Her hayvanın anlatılmayı bekleyen bir hikâyesi, güvenle bakabileceği bir çift göz ve kendisini ait
+                    hissedebileceği bir
+                    yuvası vardır.
+                    <br><br>
+                    PawsomeHome, hayvanların sevgi dolu yuvalara kavuşmasını kolaylaştırmak amacıyla tasarlanmış, hayvan
+                    sahiplenme odaklı
+                    bir dijital platform konseptidir.
+                    <br><br>
+                    Amacımız yalnızca bir hayvan ile bir insanı aynı platformda buluşturmak değil; sahiplenme sürecinin
+                    daha bilinçli,
+                    güvenli ve anlamlı bir deneyime dönüşmesine katkıda bulunmaktır.
+                    <br><br>
+                    Çünkü bize göre sahiplenmek, bir hayvana sahip olmak değil; onun hayatının bir parçası olmayı
+                    seçmektir.
+                </p>
+                <button class="button fs20 d-block mb-auto" routerLink="/explore">Dostunu Keşfet →</button>
             </div>
 
-
-            <div class="col-md-6">
-                <img src="/cat.jpg" class="alt-image d-flex ms-auto" alt="">
+            <!-- Hero Right -->
+            <div class="col-md-4">
+                <div class="img-with-text ms-auto">
+                    <img src="/cat.jpg" class="alt-image" alt="">
+                    <h5 class="mt-3">🐾 Yeni bir başlangıç</h5>
+                </div>
             </div>
         </div>
+    </div>
+
+    <!-- Number Section -->
+    <div class="col-md-12 card-container" data-aos="fade-up">
+        <div class="card card-number p-3" #tiltCard data-tilt-reverse="true">
+            <h1 #countEl>0</h1>
+            <p class="fs24">Hayvan</p>
+        </div>
+
+        <div class="card card-number p-3" #tiltCard data-tilt-reverse="true">
+            <h1 #countEl>0</h1>
+            <p class="fs24">Mutlu Hikaye</p>
+        </div>
+
+        <div class="card card-number p-3" #tiltCard data-tilt-reverse="true">
+            <h1 #countEl>0</h1>
+            <p class="fs24">Gönüllü</p>
+        </div>
+    </div>
+
+    <!-- Why Section -->
+    <div class="why-container">
+        <div class="row">
+            <div class="col-md-6" data-aos="fade-right">
+                <img src="/dog.jpg" class="big-image" alt="">
+            </div>
+            <div class="col-md-6" data-aos="fade-left">
+                <h4>Neden PawsomeHome?</h4>
+                <p class="fs18">Günümüzde pek çok hayvan güvenli ve sevgi dolu bir yuva arıyor. Kimi bir barınakta yeni
+                    ailesini
+                    bekliyor, kimi sokakta
+                    yaşam mücadelesi veriyor, kimi ise yeniden güvenmeyi öğrenmeye çalışıyor.
+                    <br><br>
+                    PawsomeHome fikri, tam da bu noktadan yola çıkıyor.
+                    <br><br>
+                    İnsanların sahiplenmek istedikleri hayvanları daha kolay keşfedebileceği, onların ihtiyaçları ve
+                    karakterleri hakkında
+                    bilgi edinebileceği ve doğru eşleşmelerin kurulabileceği sade ve kullanıcı dostu bir platform
+                    oluşturmayı hedefliyoruz.
+                    <br><br>
+                    Çünkü her hayvanın ihtiyacı aynı değildir.
+                    <br><br>
+                    Bazıları hareketli bir aileyle mutlu olurken bazıları sakin bir ev ortamını tercih edebilir.
+                    Bazıları çocuklarla çok iyi
+                    anlaşabilirken bazıları daha sessiz bir yaşam alanına ihtiyaç duyabilir.
+                    <br><br>
+                    Bu nedenle doğru hayvanı seçmekten çok, doğru eşleşmeyi bulmanın önemli olduğuna inanıyoruz.
+
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mission & Vision Section -->
+    <div class="mission-container">
+        <div class="row">
+            <h4 class="mb-4">Misyonumuz & Vizyonumuz</h4>
+            <div class="col-md-6 mission">
+                <div class="card h-100" data-aos="fade-right">
+                    <h5 align="center">Misyonumuz</h5>
+                    <p class="fs16">PawsomeHome'un misyonu, hayvan sahiplenme sürecini daha erişilebilir ve anlaşılır
+                        hale getiren
+                        modern bir dijital
+                        deneyim sunmaktır.
+                        <br><br>
+                        Hayvanların yalnızca birer ilan veya fotoğraf olarak görülmediği; karakterlerinin,
+                        ihtiyaçlarının ve hikâyelerinin de
+                        önemsendiği bir platform anlayışını benimsiyoruz.
+                        <br><br>
+                        Her profilin arkasında bir canlı olduğunu hatırlatarak, insanlarla hayvanlar arasında doğru ve
+                        uzun süreli bağların
+                        kurulmasına katkıda bulunmayı hedefliyoruz.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 vision">
+                <div class="card h-100" data-aos="fade-left">
+                    <h5 align="center">Visyonumuz</h5>
+                    <p class="fs16">
+                        Hayvan sahiplenmenin daha bilinçli ve yaygın hale geldiği, insanların bir hayvanın hayatına
+                        dokunmanın değerini daha iyi
+                        anladığı bir gelecek hayal ediyoruz.
+                        <br><br>
+                        PawsomeHome'u gelecekte yalnızca hayvanların listelendiği bir platformdan daha fazlası olarak
+                        düşünüyoruz.
+                        <br><br>
+                        Bilgilendirici içerikler, gönüllülük faaliyetleri, bağış imkanları, hayvan bakımı hakkında
+                        rehberler ve topluluk desteği
+                        gibi farklı alanların bir araya geldiği kapsamlı bir ekosistem oluşturmak istiyoruz.
+                        <br><br>
+                        Çünkü bir hayvanın hayatını değiştirmek için bazen bir yuva, bazen bir öğün mama, bazen de
+                        sadece biraz zaman
+                        yeterlidir.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Split Section -->
+    <h4>Birlikte Daha Fazlasını Yapabiliriz</h4>
+    <div class="row">
+        <div class="col-md-4">
+
+        </div>
+        <div class="col-md-4"></div>
+        <div class="col-md-4"></div>
     </div>
 </div>

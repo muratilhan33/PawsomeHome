@@ -1,29 +1,100 @@
 @import '../../../styles/colors.scss';
 
-.card {
+.hero-card {
     background: none;
     padding: 0 8px;
+    border: 0;
 
     .button {
         width: 300px;
         font-weight: 600;
         letter-spacing: 10%;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        transition: all 0.3s ease;
+        transition: all 0.1s ease;
         transform: translateY(0);
-        height: 40px;
-
+        height: 60px;
+        border: 2px solid $border;
 
         &:hover {
-            background-color: $primary-dark;
+            transform: scale(1.1) translateY(-5px);
+            background-color: $border;
+            color: $primary;
         }
     }
 
     .alt-image {
-        width: 400px;
+        width: 100%;
         height: 418px;
         object-fit: cover;
         border-radius: 20px;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .img-with-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        float: right;
+    }
+}
+
+.card-container {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    .card {
+        padding: 20px;
+        height: 200px;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        background: rgba(255, 255, 255, 0.15);
+        border-color: $border;
+
+        p {
+            margin: 0;
+        }
+    }
+
+    .card:hover {
+        background: linear-gradient(135deg, $secondary 0%, rgba(255, 255, 255, 0.15) 100%);
+    }
+}
+
+.why-container {
+    margin-top: 100px;
+
+    .big-image {
+        width: 100%;
+        height: 520px;
+        object-position: center 80%;
+        object-fit: cover;
+        border-radius: 20px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+}
+
+.mission-container {
+    margin-top: 100px;
+
+    h4 {
+        text-align: center;
+    }
+
+    .card {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        padding: 10px;
+        border-color: $border;
+        transition: all 0.1s ease;
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.25);
+            transform: scale(1.03);
+
+        }
     }
 }
