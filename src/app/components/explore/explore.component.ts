@@ -8,11 +8,12 @@ import { Paw } from '../../models/paw.model';
 import { FormsComponent } from "./forms/forms.component";
 import { FilterService, PawFilters } from '../../services/filter.service';
 import { Subscription } from 'rxjs';
+import { ScrollToTopComponent } from '@shared/scroll-to-top/scroll-to-top.component';
 
 @Component({
   selector: 'app-explore',
   standalone: true,
-  imports: [RouterLink, NgFor, FormsComponent],
+  imports: [RouterLink, NgFor, FormsComponent, ScrollToTopComponent],
   templateUrl: './explore.component.html',
   styleUrl: './explore.component.scss'
 })

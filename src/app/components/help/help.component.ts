@@ -7,6 +7,7 @@ import { fileListValidator } from '@shared/validators/file-validators';
 import { NgFor, NgIf } from '@angular/common';
 import { FaqItem } from '@shared/components/faq/faq-items.model';
 import { FaqComponent } from "@shared/components/faq/faq.component";
+import { ScrollToTopComponent } from "@shared/scroll-to-top/scroll-to-top.component";
 
 interface PhotoPreview {
   file: File;
@@ -16,7 +17,7 @@ interface PhotoPreview {
 @Component({
   selector: 'app-help',
   standalone: true,
-  imports: [RouterLink, RecaptchaModule, ReactiveFormsModule, NgIf, NgFor, FaqComponent],
+  imports: [RouterLink, RecaptchaModule, ReactiveFormsModule, NgIf, NgFor, FaqComponent, ScrollToTopComponent],
   templateUrl: './help.component.html',
   styleUrl: './help.component.scss'
 })

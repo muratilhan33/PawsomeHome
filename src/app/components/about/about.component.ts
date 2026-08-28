@@ -3,6 +3,7 @@ import { RouterLink } from "@angular/router";
 import { CountUp } from 'countup.js';
 import * as AOS from 'aos';
 import VanillaTilt from 'vanilla-tilt';
+import { ScrollToTopComponent } from "@shared/scroll-to-top/scroll-to-top.component";
 
 interface StatCard {
   value: number;
@@ -14,7 +15,7 @@ interface StatCard {
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, ScrollToTopComponent],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss'
 })

@@ -3,11 +3,12 @@ import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
 import * as AOS from 'aos';
 import { RouterLink } from '@angular/router';
 import { ViewportScroller } from '@angular/common';
+import { ScrollToTopComponent } from '@shared/scroll-to-top/scroll-to-top.component';
 
 @Component({
   selector: 'home',
   standalone: true,
-  imports: [CarouselModule, RouterLink],
+  imports: [CarouselModule, RouterLink, ScrollToTopComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
