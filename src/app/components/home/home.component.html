@@ -1,6 +1,6 @@
 <div class="home">
 
-    <a class="bubble" (click)="scrollToHiw()">
+    <!-- <a class="bubble" (click)="scrollToHiw()">
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="100"
             height="100" x="0" y="0" viewBox="0 0 365.442 365.442" style="enable-background:new 0 0 512 512"
             xml:space="preserve" class="">
@@ -10,7 +10,7 @@
                     fill="#000000" opacity="1" data-original="#000000"></path>
             </g>
         </svg>
-    </a>
+    </a> -->
 
     <div class="hero-section">
         <img class="hero-bg" src="/hero-bg.jpg" alt="">
@@ -26,9 +26,12 @@
             <div class="ellipse ellipse-primary"></div>
             <div class="container">
                 <div class="row">
-                    <div class="col-6" data-aos="fade-up">
+                    <div class="col-12 col-md-6 order-md-2" data-aos="fade-left">
+                        <img src="/cat.jpg" class="alt-image" alt="">
+                    </div>
+                    <div class="col-12 col-md-6 order-md-1" data-aos="fade-up">
                         <div class="row">
-                            <div class="col-6 fs20">
+                            <div class="col-6 fs20 m-mt">
                                 <p>Dost Edin</p>
                             </div>
                         </div>
@@ -46,24 +49,21 @@
                             </div>
                         </div>
 
-                        <div class="col-6" data-aos="fade-up" style="margin-top: 40px;">
+                        <div class="col-12 col-lg-6" data-aos="fade-up" style="margin-top: 40px;">
                             <button class="button fs20">HEMEN SAHİPLEN</button>
                         </div>
-                    </div>
-                    <div class="col-6" data-aos="fade-left">
-                        <img src="/cat.jpg" class="alt-image" alt="">
                     </div>
                 </div>
             </div>
 
             <div class="adopt-container">
                 <div class="row">
-                    <div class="col-6" data-aos="fade-right">
+                    <div class="col-md-6" data-aos="fade-right">
                         <img src="/dog.jpg" class="alt-image" alt="">
                     </div>
-                    <div class="col-6" data-aos="fade-up">
+                    <div class="col-md-6" data-aos="fade-up">
                         <div class="row">
-                            <div class="col-6 fs20">
+                            <div class="col-6 fs20 m-mt">
                                 <p>Dost Edin</p>
                             </div>
                         </div>
@@ -81,7 +81,7 @@
                             </div>
                         </div>
 
-                        <div class="col-6" data-aos="fade-up" style="margin-top: 40px;">
+                        <div class="col-12 col-lg-6" data-aos="fade-up" style="margin-top: 40px;">
                             <button class="button fs20">HEMEN SAHİPLEN</button>
                         </div>
                     </div>
@@ -106,95 +106,100 @@
             </div>
 
             <div class="hiw-container" id="hiw">
-                <p class="fs20" data-aos="fade-left">Nasıl Çalışır?</p>
-                <div class="row" data-aos="fade-right">
-                    <div class="col-1"></div>
-                    <div class="col-7 hiw-box box-primary">
-                        <h2 class="fs48 bold">1. Keşfet</h2>
-                        <p class="fs20">Sahiplenmeyi bekleyen dostlarımızı inceleyin.</p>
+                <div class="container">
+                    <p class="fs20" data-aos="fade-left">Nasıl Çalışır?</p>
+                    <div class="row" data-aos="fade-right">
+                        <div class="col-1 empty"></div>
+                        <div class="col-12 col-lg-7 hiw-box box-primary">
+                            <h2 class="fs48 bold">1. Keşfet</h2>
+                            <p class="fs20">Sahiplenmeyi bekleyen dostlarımızı inceleyin.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="row" data-aos="fade-right">
-                    <div class="col-3"></div>
-                    <div class="col-7 hiw-box box-secondary">
-                        <h2 class="fs48 bold">2. Başvur</h2>
-                        <p class="fs20">Kısa bir form doldurarak ilk adımı atın.</p>
+                    <div class="row" data-aos="fade-right">
+                        <div class="col-3 empty"></div>
+                        <div class="col-12 col-lg-7 hiw-box box-secondary">
+                            <h2 class="fs48 bold">2. Başvur</h2>
+                            <p class="fs20">Kısa bir form doldurarak ilk adımı atın.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="row" data-aos="fade-right">
-                    <div class="col-5"></div>
-                    <div class="col-7 hiw-box box-accent">
-                        <h2 class="fs48 bold">3. Buluş & Sahiplen</h2>
-                        <p class="fs20">Yeni dostunuzla tanışın, sonsuza kadar dost olun!</p>
+                    <div class="row" data-aos="fade-right">
+                        <div class="col-5 empty"></div>
+                        <div class="col-12 col-lg-7 hiw-box box-accent">
+                            <h2 class="fs48 bold">3. Buluş & Sahiplen</h2>
+                            <p class="fs20">Yeni dostunuzla tanışın, sonsuza kadar dost olun!</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div class="stories-container">
-                <h1 class="fs56 bold" data-aos="fade-up">Gerçek Hikayeler</h1>
+                <div class="container">
+                    <h1 class="fs56 bold" data-aos="fade-up">Gerçek Hikayeler</h1>
 
-                <div class="row" data-aos="fade-right">
-                    <div class="story-box col-12">
-                        <div class="row">
-                            <div class="col-5">
-                                <img src="/1.jpg" alt="">
-                            </div>
-                            <div class="col-7">
-                                <h3 class="fs36 bold">🐶 Umut’un Hikayesi</h3>
-                                <p class="fs16 italic">"Kızımız Derin için bir arkadaş arıyorduk. Bu site sayesinde
-                                    Umut’la
-                                    tanıştık. İlk başta biraz çekingen olsa da, kısa
-                                    sürede bize alıştı. Şimdi evimizin neşe kaynağı! Sabahları Derin’i okula uğurluyor,
-                                    akşamları ise kucağımıza kıvrılıp
-                                    uyuyor. İyi ki Umut’u sahiplenmişiz, artık onsuz bir hayat düşünemiyoruz!"</p>
-                                <p class="fs16 bold author">Elif & Can</p>
+                    <div class="row" data-aos="fade-right">
+                        <div class="story-box col-12">
+                            <div class="row">
+                                <div class="col-12 col-md-5">
+                                    <img src="/1.jpg" alt="">
+                                </div>
+                                <div class="col-12 col-md-7">
+                                    <h3 class="fs36 bold">🐶 Umut’un Hikayesi</h3>
+                                    <p class="fs16 italic">"Kızımız Derin için bir arkadaş arıyorduk. Bu site sayesinde
+                                        Umut’la
+                                        tanıştık. İlk başta biraz çekingen olsa da, kısa
+                                        sürede bize alıştı. Şimdi evimizin neşe kaynağı! Sabahları Derin’i okula
+                                        uğurluyor,
+                                        akşamları ise kucağımıza kıvrılıp
+                                        uyuyor. İyi ki Umut’u sahiplenmişiz, artık onsuz bir hayat düşünemiyoruz!"</p>
+                                    <p class="fs16 bold author">Elif & Can</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="row" data-aos="fade-left">
-                    <div class="col-5"></div>
-                    <div class="story-box col-12">
-                        <div class="row">
-                            <div class="col-5">
-                                <img src="/2.jpg" class="img-zoom" alt="">
-                            </div>
-                            <div class="col-7">
-                                <h3 class="fs36 bold">🐱 Şans’ın Hikayesi</h3>
-                                <p class="fs16 italic">"Yalnız yaşamaya alışmıştım ama içimde hep bir boşluk vardı.
-                                    Burada Şans’ı gördüm ve gözlerindeki hüznü hemen hissettim.
-                                    Onu sahiplendiğimde, aslında o da beni sahiplendi! Artık kitap okurken kucağımda
-                                    uyuyor, sabahları pencere kenarında
-                                    güneşleniyor. Evim, kalbim doldu. İyi ki yollarımız kesişti."</p>
-                                <p class="fs16 bold author">Ayşe Teyze</p>
+                    <div class="row" data-aos="fade-left">
+                        <div class="col-5"></div>
+                        <div class="story-box col-12">
+                            <div class="row">
+                                <div class="col-12 col-md-5">
+                                    <img src="/2.jpg" class="img-zoom" alt="">
+                                </div>
+                                <div class="col-12 col-md-7">
+                                    <h3 class="fs36 bold">🐱 Şans’ın Hikayesi</h3>
+                                    <p class="fs16 italic">"Yalnız yaşamaya alışmıştım ama içimde hep bir boşluk vardı.
+                                        Burada Şans’ı gördüm ve gözlerindeki hüznü hemen hissettim.
+                                        Onu sahiplendiğimde, aslında o da beni sahiplendi! Artık kitap okurken kucağımda
+                                        uyuyor, sabahları pencere kenarında
+                                        güneşleniyor. Evim, kalbim doldu. İyi ki yollarımız kesişti."</p>
+                                    <p class="fs16 bold author">Ayşe Teyze</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="row" data-aos="fade-down">
-                    <div class="col-2"></div>
-                    <div class="story-box col-12">
-                        <div class="row">
-                            <div class="col-5">
-                                <img src="/3.jpg" class="img-left" alt="">
-                            </div>
-                            <div class="col-7">
-                                <h3 class="fs36 bold">🐕‍🦺 Çıtır’ın Hikayesi</h3>
-                                <p class="fs16 italic">"Biz doğa aşığı bir çiftiz ve hep yanımızda bir dost olsun
-                                    istemiştik. Çıtır’ı bu sitede görünce hemen tanışmaya gittik.
-                                    O kadar enerjik ve sevgi doluydu ki, tam aradığımız dosttu! Şimdi her hafta sonu
-                                    bizimle doğa yürüyüşlerinde, kamplarda,
-                                    maceralarda! Bir köpek sahiplenmek istiyorsanız, hiç düşünmeden harekete geçin.
-                                    Hayatımıza neşe kattı!"</p>
-                                <p class="fs16 bold author">Ali & Zeynep</p>
+                    <div class="row" data-aos="fade-down">
+                        <div class="col-2"></div>
+                        <div class="story-box col-12">
+                            <div class="row">
+                                <div class="col-12 col-md-5">
+                                    <img src="/3.jpg" class="img-left" alt="">
+                                </div>
+                                <div class="col-12 col-md-7">
+                                    <h3 class="fs36 bold">🐕‍🦺 Çıtır’ın Hikayesi</h3>
+                                    <p class="fs16 italic">"Biz doğa aşığı bir çiftiz ve hep yanımızda bir dost olsun
+                                        istemiştik. Çıtır’ı bu sitede görünce hemen tanışmaya gittik.
+                                        O kadar enerjik ve sevgi doluydu ki, tam aradığımız dosttu! Şimdi her hafta sonu
+                                        bizimle doğa yürüyüşlerinde, kamplarda,
+                                        maceralarda! Bir köpek sahiplenmek istiyorsanız, hiç düşünmeden harekete geçin.
+                                        Hayatımıza neşe kattı!"</p>
+                                    <p class="fs16 bold author">Ali & Zeynep</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-3 mx-auto" data-aos="fade-up">
-                    <button class="button fs20 mt30">TAMAMINI GÖR</button>
+                    <div class="col-12 col-md-6 col-lg-3 mx-auto" data-aos="fade-up">
+                        <button class="button fs20 mt30">TAMAMINI GÖR</button>
+                    </div>
                 </div>
             </div>
         </div>

@@ -13,7 +13,6 @@ import { ScrollToTopComponent } from '@shared/scroll-to-top/scroll-to-top.compon
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-
   isVisible = false;
 
   ngOnInit(): void {

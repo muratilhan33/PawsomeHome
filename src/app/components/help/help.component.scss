@@ -95,3 +95,24 @@ input[type="file"] {
     padding: 1px 5px;
     border-radius: 4px;
 }
+
+@media (min-width:576px) and (max-width:992px) {
+    .rc-anchor {
+        transform: scale(0.75);
+        transform-origin: 0 0;
+        -webkit-transform: scale(0.75);
+        -webkit-transform-origin: 0 0;
+    }
+}
+
+@media (max-width:768px) {
+    .form-control {
+        max-width: 500px;
+        width: 100%;
+    }
+
+    .faq-container {
+        margin-top: 48px;
+    }
+
+}
