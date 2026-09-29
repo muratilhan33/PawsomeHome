@@ -151,4 +151,21 @@ section {
     .button {
         width: 100% !important;
     }
+
+    .cta-card {
+        .img-with-text {
+            float: none;
+        }
+    }
+
+    .split-container {
+        h4 {
+            margin: 8px;
+        }
+
+        .row {
+            grid-template-columns: 1fr;
+            margin: 8px;
+        }
+    }
 }
