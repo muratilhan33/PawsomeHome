@@ -4,6 +4,7 @@
     margin-top: 150px;
     height: 222px;
 
+
     span {
         color: $background;
     }
@@ -23,7 +24,7 @@
 
     .input-wrapper {
         position: relative;
-        width: 500px;
+        width: 400px;
 
         .input-text {
             width: 100%;
@@ -84,9 +85,9 @@
     }
 }
 
-@media (min-width:768px) and (max-width:992px) {
+@media (min-width:768px) {
     .footer {
-        height: 278px;
+        height: 100%;
 
         .input-wrapper {
             width: 100%;

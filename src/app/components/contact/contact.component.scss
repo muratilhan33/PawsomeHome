@@ -1,5 +1,9 @@
 @import '../../../styles/colors.scss';
 
+:host {
+    display: block;
+}
+
 .card {
     background: none;
     height: 550px;
